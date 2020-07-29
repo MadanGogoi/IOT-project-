@@ -180,7 +180,7 @@
         }
     }
     
-    //telegram function to send the notification to the user
+    //telegram function to send the notification to the user.
     
     function telegram_highBound($rise)
     {
