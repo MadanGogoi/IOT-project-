@@ -1,0 +1,10 @@
+Prediction: -
+	This project can use the earlier data to predict the future data values using a simple Time series algorithm called Weighted Moving Average Algorithm. 
+Weighted Moving Average: -
+	A Weighted Moving Average puts more weight on recent data and less on past data.
+Each period’s data is multiplied by a weight, with the weighting determined by the number of periods selected.
+Formula: -
+WMA = (Pn * Cn) + (Pn-1 * Cn-1) + (Pn-2 * Cn-2) +…………… +(P2 * C2) + (P1 * C1) / (Cn + Cn-1 +…+C2+C1)
+Where,
+Pn = Current data
+Pn-1 = Previous data
