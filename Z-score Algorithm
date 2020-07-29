@@ -1,0 +1,29 @@
+Anomaly Detection: -
+When the data is static between certain values and there is any anomaly point, then the user can simply put threshold value using If statement. But when the data is steadily increasingly in a graph and the anomaly point happens latterly in the graph but not lower than the starting point of the graph. If we use the earlier method, than the other points will also comes under threshold value. Now, this project requires to change the threshold value according to the data. So, in such type of data z-score analysis algorithm is used which changes the threshold value according to the data based on certain methods. 
+
+Z-score Analysis: -
+Every data point which is collected in the database is used as a specific value. Using these values, we calculate the Mean value.
+
+
+Mean: -  the sum of the 10 datavalues/ no. of data;
+
+                         
+where, 
+Mn = Mean,
+Vi = the sum of all the values of the data,
+r = Frame size.
+
+Z-score formula: - C* the squareroot(variance)
+
+                          
+                          
+
+Where, 
+Zn = Z-score, 
+C = Multiplication factor,
+Threshold value:
+
+                
+Where, 
+High_Threshold = Vi+ Zn,
+Low_Threshold  = Vi – Zn.
