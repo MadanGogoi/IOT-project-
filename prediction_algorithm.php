@@ -60,7 +60,7 @@ require 'database_connection.php';
 
     
     
-   //$limit = 10;
+   
     
     $values = ($ans - $limit)+1;
     
@@ -109,7 +109,7 @@ require 'database_connection.php';
     
        
         $value =0; $c =1; $div =0;
-        //echo nl2br("\n".$id."\t".$die."\t");
+ 
         
         for($i = $id; $i <= $die; $i++)
         {
@@ -118,7 +118,6 @@ require 'database_connection.php';
             $c += 1;
             
         }
-        //echo $value. "\t\t\t". $c."\t\t\t".$div;
         $value = $value/$div;
         $approx_value = number_format($value,3,'.','');
          echo nl2br("\n"."predicted value is  ".$count. "=". $approx_value."\n\n");
@@ -128,10 +127,7 @@ require 'database_connection.php';
         $number = sizeof($car);
       
        $car[$number] = $value;
-         
-        //$number = sizeof($car);
-       // echo nl2br($number."\n".$id."\t\t".$die);
-        
+       
 
         $id = $id +1;
         $die = $number-1;
@@ -139,11 +135,7 @@ require 'database_connection.php';
         $n1++;
         $count++;
         sleep(5);
-        
-       // for($i = $id; $i <= $die;$i++)
-        //{
-           // echo nl2br("\t". $car[$i]);
-        //}
+      
     
     }
     echo nl2br("\n The predicted values are");
@@ -156,34 +148,4 @@ require 'database_connection.php';
     </div>
     </body>
     </html>
-    <!--
    
-    /*
-    //taking the next four data from the dataset to find the error
-    /*
-    $v1 = $v2 + 1;
-    $v2 = $v2 + 3;
-    
-
-    $stmt->bindColumn('VALUE', $val);
-     while($result = $stmt->fetch(PDO::FETCH_BOUND))
-    {
-      $error[$i] = $val;
-      
-      echo nl2br("\t". $error[$i]."\n");
-      $i++;
-      
-    }
-    
-    $error_value =0;
-    
-    for($id =0;$id < 4;$id++)
-    {
-        $error_value += $predict[$id]- $error[$id];
-        
-    }    
-   
-   echo nl2br("\n");
-   echo $error_value;
-   */
-   -->
