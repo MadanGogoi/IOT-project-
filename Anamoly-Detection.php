@@ -79,8 +79,7 @@
         
         $mean_value = mean($result);// calling the mean function
         $zscore_value = zscore($result);// calling the zscore function;
-        //echo nl2br("\n mean_value = ". $mean_value. "\n". "zscore_value= ". $zscore_value. "\n"); //showing the value of mean and zscore
-        
+       
 
         $stmt = $conn->prepare("SELECT VALUE FROM DATA2 WHERE ID = $old");
         $stmt-> execute();
@@ -169,14 +168,13 @@
             {
                 $rise = $value['VALUE'];
                 telegram_highBound($rise);
-                //echo nl2br("\n the tempreture is: ". $value['VALUE']."."); 
+                
             }
             else if($value['VALUE'] <= $Low_bound)
             {
                 $low = $value['VALUE'];
                 telegram_lowBound($low);
-                //echo nl2br("\n the tempreture is: ". $value['VALUE']."."); 
-            }
+                
         }
     }
     
