@@ -1,4 +1,5 @@
-# IOT-project-
+# IOT-project
+
 It is an IOT project where I am using LM35 temperature sensor and NodeMCU. Its work is to detect any anamoly detection and predict the temperature.
 
 For sending data from LM35 to the server , I am using NodeMCU1.0 which is a wifi module.
